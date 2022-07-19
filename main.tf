@@ -47,6 +47,7 @@ resource "aws_default_vpc" "default" {
     Name = "Default VPC"
   }
 }
+/*
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t3.micro"
@@ -61,7 +62,7 @@ resource "aws_instance" "web" {
               systemctl restart apache2
               EOF
 }
-
+*/
 resource "aws_security_group" "web-sg" {
   name = "${random_pet.sg.id}-sg"
   ingress {
